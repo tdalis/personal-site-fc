@@ -12,6 +12,49 @@
             background-color: darkseagreen;
         }
 
+        /* for the pic_section use the pic section as a box and then create a class for the backgroun picture that is contained in this box, maybe it'll solve
+        the margin and padding issues of the css */
+        .pic_section {
+            width: 1600px;
+            background-image: url("background_top/me_athens.jpg");
+            height: 800px;
+            position: relative;
+            text-align: center;
+            vertical-align: middle;
+            /* margin-left: 50%; */
+            padding-right: 80%;
+
+
+        }
+
+        .links {
+            position: relative;
+            background: darkgray;
+            margin-left: 600px;
+            margin-right: 600px;
+        }
+
+        #link_h3 {
+            position: relative;
+            text-align: left;
+        }
+
+        #fcc {
+            position: relative;
+            margin-right: 50px;
+        }
+
+        #cw {
+            position: relative;
+            margin-right: 50px;
+
+        }
+
+        #gh {
+            position: relative;
+            margin-right: 50px;
+            
+        }
     </style>
 
     <main>
@@ -23,11 +66,50 @@
             4) Links to my freecodecamp profile
             5) Link ot my codewars pages
             6) Include an image carousel built into my site -->
-            <h1 style="color: firebrick;">Tasos Pardalis</h1>
-
+            <div class="pic_section">
+                <h1 style="color: firebrick;">Tasos Pardalis</h1>
+                <h2 style="color: crimson;">Data Scientist | Aspiring Software Engineer | Creator</h2>
+            </div>
+            <div class="links">
+                <h3 id="link_h3">Check the links to my Codewars, FreeCodeCamp and Github below to find out more about my experience as a developer so far:</h3>
+                <!-- add the links to freecodecamp, codewars and github-->
+                <a id="fcc" href="https://www.freecodecamp.org/tdalis" target="_blank"> <img src="profiles_logos/fcc_logo.png" style="width: 64px;height: 64px;border: 0;"> </a>
+                <a id="cw" href="https://www.codewars.com/users/tdalis" target="_blank"> <img src="profiles_logos/cw_logo.png" style="width: 64px; height:64px; border: 0;"></a>
+                <a id="gh" href="https://github.com/tdalis" target="_blank"> <img src="profiles_logos/gh_logo.png" style="width: 64px; height: 64px; border: 0;"> </a>
+            </div>
             <div id = "personalIntro">
                 <!-- write a bit about me here -->
+                <div>
+                    <p>Welcome to my site! My name is Tasos and as you can see above I am a data scientist with aspirations of becoming a software enginner.</p>
+                </div>
             </div>
+
+            <div>
+                <!-- video intro-->
+            </div>
+
+            <div class="img_carousel">
+                <!-- image carousel-->
+                <!-- my carousel (slider) code comes from this source: http://qnimate.com/creating-a-slider-using-html-and-css-only/
+                However, I'd like to try and adopt some parts for myself. I understand how it works and what I am thinking to change is to see that instead of-->
+                <span id = "slider_img_1"></span>
+                <span id = "slider__img_2"></span>
+                <span id = "slider_img_3"></span>
+                <!-- each span is going to be used to link to the image-floder div. The target will use the pixel (px) location of the image-folder div 
+                such as if we have 3 images of 800px width each, then the image-folder div should have a total width of 2400px and each of the slider_img spans
+                will target to 800px left or right when clicked -->
+                <div class="image_holder">
+                    <img href="img1.png" class="carousel_img">
+                    <img href="img2.png" class="carousel_img">
+                    <img href="img3.png" class="carousel_img">
+                </div>
+                <div class="buttons_holder">
+                    <!-- each button is a simple local link and it should target to one of the sliders spans-->
+                    <a href="#slider_img_1" class="button_change"></a>
+                    <a href="#slider_img_2" class="button_change"></a>
+                    <a href="#slider_img_3" class="button_change"></a>
+                </div>
+            </div>https://www.w3schoolhttps://www.w3schoolshttps://www.w3schools.com/cssref/sel_target.asp.com/cssref/sel_target.aspshttps://www.w3schools.com/cssref/sel_target.asp.com/cssref/sel_target.asp
 
 
         </body>
