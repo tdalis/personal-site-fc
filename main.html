@@ -10,21 +10,21 @@
             text-align: center;
             vertical-align: middle;
             background-color: darkseagreen;
+            overflow-x: hidden;
         }
 
         /* for the pic_section use the pic section as a box and then create a class for the backgroun picture that is contained in this box, maybe it'll solve
         the margin and padding issues of the css */
         .pic_section {
-            width: 1600px;
-            background-image: url("background_top/me_athens.jpg");
+            background-image: url("background_top/me_athens.jpg"); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: -20px;
+            width: 100%;
             height: 800px;
             position: relative;
             text-align: center;
-            vertical-align: middle;
-            /* margin-left: 50%; */
-            padding-right: 80%;
-
-
         }
 
         .links {
@@ -54,6 +54,59 @@
             position: relative;
             margin-right: 50px;
             
+        }
+
+        .img_carousel_container {
+            width: 1200px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            background-color: magenta;
+        }
+
+        .image_holder {
+            width: 3600px;
+            height: 600px;
+            background-color: maroon;
+            clear: both;
+            position: relative;
+            transition: left 2s;
+        }
+
+        .carousel_img {
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        #slider_img_1:target ~ .image_holder {
+            right: 1200px;
+        }
+
+        #slider_img_2:target ~ .image_holder {
+            left: 2400px;
+        }
+
+        #slider_img_3:target ~ .image_holder {
+            right: 2400px;
+        }
+
+        .buttons_holder {
+            position: relative;
+            top: -20px;
+        }
+
+        .button_change {
+            display: inline-block;
+            border-radius: 5px;
+            height: 20px;
+            width: 20px;
+            background-color: maroon;
         }
     </style>
 
@@ -88,7 +141,7 @@
                 <!-- video intro-->
             </div>
 
-            <div class="img_carousel">
+            <div class="img_carousel_container">
                 <!-- image carousel-->
                 <!-- my carousel (slider) code comes from this source: http://qnimate.com/creating-a-slider-using-html-and-css-only/
                 However, I'd like to try and adopt some parts for myself. I understand how it works and what I am thinking to change is to see that instead of-->
@@ -98,10 +151,13 @@
                 <!-- each span is going to be used to link to the image-floder div. The target will use the pixel (px) location of the image-folder div 
                 such as if we have 3 images of 800px width each, then the image-folder div should have a total width of 2400px and each of the slider_img spans
                 will target to 800px left or right when clicked -->
+                <!--https://www.w3schoolhttps://www.w3schoolshttps://www.w3schools.com/cssref/sel_target.asp.com/cssref/sel_target.aspshttps://www.w3schools.com/cssref/sel_target.asp.com/cssref/sel_target.asp-->
                 <div class="image_holder">
-                    <img href="img1.png" class="carousel_img">
-                    <img href="img2.png" class="carousel_img">
-                    <img href="img3.png" class="carousel_img">
+                    <!-- The example code assumes that all the image have the same size. I chose to use images I have taken myself, therefore, I standardize their 
+                    size using the width and heigth styling insight the <img> element-->
+                    <img src="carousel_imgs/cyprus_donkey.jpg" width="1200px" height="600px" class="carousel_img">
+                    <img src="carousel_imgs/color_festival.png" width="1200px" height="600px" class="carousel_img">
+                    <img src="carousel_imgs/taj_majal.png" width="1200px" height="600px" class="carousel_img">
                 </div>
                 <div class="buttons_holder">
                     <!-- each button is a simple local link and it should target to one of the sliders spans-->
@@ -109,7 +165,7 @@
                     <a href="#slider_img_2" class="button_change"></a>
                     <a href="#slider_img_3" class="button_change"></a>
                 </div>
-            </div>https://www.w3schoolhttps://www.w3schoolshttps://www.w3schools.com/cssref/sel_target.asp.com/cssref/sel_target.aspshttps://www.w3schools.com/cssref/sel_target.asp.com/cssref/sel_target.asp
+            </div>
 
 
         </body>
