@@ -19,11 +19,15 @@
 
             function showSlides(n) {
             var i;
-            var slides = document.getElementsByClassName("img_carousel_container");
-            var dots = document.getElementsByClassName("dot");
+            var slides = document.getElementsByClassName("carousel_img");
+            var dots = document.getElementsByClassName("button_change");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
+                // this part of the JS am not sure I understand hwy display = "none"
+                // from my understanding, what this means is that we add the slide element in our html so JS can iterate through it, but we don't want to display it
+                // because if we were to display it then it would cover the pictures of our carousel. Since the slides[i] element "seats" on top of the carousel image
+                // by clicking it to go to the next slide in this iteration, the next slide that seats on top of the next image is "displayed"
                 slides[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
@@ -31,6 +35,20 @@
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
+            }
+
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var slides = document.getElementsByClassName("carousel_img");
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 8000); 
             }
         </script>
     </head>
@@ -250,9 +268,13 @@
                 </div>
                 <div class="buttons_holder">
                     <!-- each button is a simple local link and it should target to one of the sliders spans-->
-                    <a href="#slider_img_1" class="button_change"></a>
-                    <a href="#slider_img_2" class="button_change"></a>
-                    <a href="#slider_img_3" class="button_change"></a>
+                    <!-- commenting out the original code I had to test if without the href targeting the JS will work-->
+                   <!-- <a href="#slider_img_1" onclick="currentSlide(0)" class="button_change"></a>
+                    <a href="#slider_img_2" onclick="currentSlide(2)" class="button_change"></a>
+                    <a href="#slider_img_3" onclick="currentSlide(3)" class="button_change"></a> -->
+                    <a onclick="currentSlide(0)" class="button_change"></a>
+                    <a onclick="currentSlide(2)" class="button_change"></a>
+                    <a onclick="currentSlide(3)" class="button_change"></a>
                     <!-- Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
