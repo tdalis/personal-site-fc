@@ -1,4 +1,6 @@
-
+.wrapper {
+    width: 100%;
+}
 
 body {
     width: 100%;
@@ -11,86 +13,112 @@ body {
 
 /* for the pic_section use the pic section as a box and then create a class for the backgroun picture that is contained in this box, maybe it'll solve
 the margin and padding issues of the css */
-.pic_section {
-    background-image: url("background_top/me_athens.jpg"); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.pic_section { 
     margin-top: -20px;
     width: 100%;
-    height: 800px;
+    /* height: 800px; */
     position: relative;
     text-align: center;
 }
 
-.links {
+.banner_img {
+    display: none;
+}
+
+/* name h1 */
+.name {
+    position: relative;
+    padding: 10px, 50px, 0px, 50px;
+    font-size: 24px;
+}
+
+#my_face img{
+    width: 350px;
+    height: 350px;
+    margin-top: -80px;
+    margin-bottom: -80px;
+}
+
+.profession {
+    position: relative;
+    padding: 10px, 50px, 0px, 50px;
+    font-size: 20px;
+}
+
+.links_wrapper {
     position: relative;
     background: darkgray;
-    margin-left: 600px;
-    margin-right: 600px;
+    padding: 10px, 50px, 0px, 50px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #link_h3 {
     position: relative;
-    text-align: left;
+    text-align: center;
 }
 
 #fcc {
     position: relative;
     margin-right: 50px;
+    margin-left: 5px;
 }
 
 #cw {
     position: relative;
     margin-right: 50px;
-
+    margin-left: 5px;
 }
 
 #gh {
     position: relative;
-    margin-right: 50px;
+    margin-right: 10px;
     
 }
 
 .img_carousel_container {
-    width: 1200px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+    width: 100%;
     text-align: center;
     overflow: hidden;
     position: relative;
-    background-color: magenta;
+    background-color: darkseagreen;
+    padding-left: 7px;
 }
 
 .image_holder {
-    width: 1200px;
-    height: 600px;
-    background-color: maroon;
+    width: 100%;
+    background-color: magenta;
     clear: both;
     position: relative;
-    
     transition: 2s;
     -webkit-transition: 2s;
     -moz-transition: 2s;
     -o-transition: 2s;
+    margin-right: -50px;
+    margin-left: -10px;
 }
 
 .carousel_img {
-    float: left;
     position: relative;
-    margin: auto;
+    margin: 0;
+    width: 100%;
+}
+
+.carousel_img img {
+    width: 350px;
+    height: 225px;
+    position: relative;
+
 }
 
 .buttons_holder {
     position: relative;
-    top: -20px;
+    top: -30px;
 }
 
 .button_change {
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 2px;
     height: 20px;
     width: 20px;
     background-color: maroon;
@@ -100,7 +128,7 @@ the margin and padding issues of the css */
 .prev {
     cursor: pointer;
     position: absolute;
-    top: -300px;
+    top: -112.5px;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -110,12 +138,12 @@ the margin and padding issues of the css */
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    left: 30px;
+    left: 2px;
 }
 .next {
     cursor: pointer;
     position: absolute;
-    top: -300px;
+    top: -112.5px;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -125,7 +153,7 @@ the margin and padding issues of the css */
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    right: 30px;
+    right: 2px;
 }
 
 .prev:hover, .next:hover {
