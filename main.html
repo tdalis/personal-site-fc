@@ -2,10 +2,12 @@
 <html>
     <head>
         <title>Tasos Pardalis Personal Website</title>
-        
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
         <script>
             var slideIndex = 0;
-            /* showSlides(slideIndex); */
+
+            // try to understand this better: https://medium.com/better-programming/make-a-slideshow-with-automatic-and-manual-controls-using-html-css-and-javascript-b7e9305168f9
 
             // Next/previous controls
             function plusSlides(n) {
@@ -71,171 +73,6 @@
         </script>
     </head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            width: 100%;
-            position: relative;
-            text-align: center;
-            vertical-align: middle;
-            background-color: darkseagreen;
-            overflow-x: hidden;
-        }
-
-        /* for the pic_section use the pic section as a box and then create a class for the backgroun picture that is contained in this box, maybe it'll solve
-        the margin and padding issues of the css */
-        .pic_section {
-            background-image: url("background_top/me_athens.jpg"); 
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            margin-top: -20px;
-            width: 100%;
-            height: 800px;
-            position: relative;
-            text-align: center;
-        }
-
-        .links {
-            position: relative;
-            background: darkgray;
-            margin-left: 600px;
-            margin-right: 600px;
-        }
-
-        #link_h3 {
-            position: relative;
-            text-align: left;
-        }
-
-        #fcc {
-            position: relative;
-            margin-right: 50px;
-        }
-
-        #cw {
-            position: relative;
-            margin-right: 50px;
-
-        }
-
-        #gh {
-            position: relative;
-            margin-right: 50px;
-            
-        }
-
-        .img_carousel_container {
-            width: 1200px;
-            height: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-            background-color: magenta;
-        }
-
-        .image_holder {
-            width: 1200px;
-            height: 600px;
-            background-color: maroon;
-            clear: both;
-            position: relative;
-            
-            transition: 2s;
-            -webkit-transition: 2s;
-            -moz-transition: 2s;
-            -o-transition: 2s;
-        }
-
-        .carousel_img {
-            float: left;
-            position: relative;
-            margin: auto;
-        }
-
-        .buttons_holder {
-            position: relative;
-            top: -20px;
-        }
-
-        .button_change {
-            display: inline-block;
-            border-radius: 5px;
-            height: 20px;
-            width: 20px;
-            background-color: maroon;
-        }
-
-        /* Next and previous buttons */
-        .prev {
-            cursor: pointer;
-            position: absolute;
-            top: -300px;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            left: 30px;
-        }
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: -300px;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            right: 30px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: maroon;
-        }
-
-        .autoButton {
-            cursor: pointer;
-            position: absolute;
-            top: -600px;
-            width: auto;
-            margin-top: 20px;
-            padding: 16px;
-            color: black;
-            font-weight: bold;
-            font-size: 25px;
-            left: 30px;
-        }
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
-
-        @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
-    </style>
-
     <main>
         <body>
             <!-- The website needs to have 
