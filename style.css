@@ -83,7 +83,7 @@ the margin and padding issues of the css */
     text-align: center;
     overflow: hidden;
     position: relative;
-    background-color: darkseagreen;
+    /* background-color: lightslategray; */
     padding-left: -10px;
 
 }
@@ -197,9 +197,101 @@ the margin and padding issues of the css */
 
 
 @media only screen and (min-width: 768px) {
+    .banner_img {
+        display: block;
+        width: 100%;
+    }
+
+    #my_face {
+        position: absolute;
+        margin-top: -100px;
+        width: 100%;
+        text-align: left;
+        margin-left: 150px;
+    }
+
+    #my_face img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        width: 100%;
+        text-align: center;
+        margin-top: -550px; 
+    }
+
+    .profession {
+        width: 100%;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .links_wrapper {
+        margin-top: 420px;
+    }
+
     .carousel_img img {
         width: 768px;
         height: 492px;
+    }
+
+    .prev {
+        top: -264px;
+        left: -5px;
+    }
+
+    .next {
+        top: -264px;
+        right: 2px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .banner_img {
+        display: block;
+        width: 100%
+    }
+
+    #my_face {
+        position: absolute;
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+        text-align: left;
+        top: 10vh;
+    }
+
+    #my_face img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .name {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        top: 2vh;
+        position: absolute;
+    }
+
+    .profession {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 10vh;
+    }
+
+    .links_wrapper {
+        margin-top: -10px;
+    }
+
+    .carousel_img img {
+        width: 1000px;
+        height: 500px;
     }
 
     .prev {
