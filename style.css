@@ -1,15 +1,17 @@
 .wrapper {
     width: 100%;
+    overflow: hidden;
+    text-align: center;
 }
 
-body {
+/* body {
     width: 100%;
     position: relative;
     text-align: center;
     vertical-align: middle;
     background-color: darkseagreen;
     overflow-x: hidden;
-}
+} */
 
 /* for the pic_section use the pic section as a box and then create a class for the backgroun picture that is contained in this box, maybe it'll solve
 the margin and padding issues of the css */
@@ -67,12 +69,12 @@ the margin and padding issues of the css */
 #cw {
     position: relative;
     margin-right: 50px;
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 #gh {
     position: relative;
-    margin-right: 10px;
+    margin-left: 10px;
     
 }
 
@@ -82,12 +84,14 @@ the margin and padding issues of the css */
     overflow: hidden;
     position: relative;
     background-color: darkseagreen;
-    padding-left: 7px;
+    padding-left: -10px;
+
 }
 
 .image_holder {
     width: 100%;
-    background-color: magenta;
+    background-color: lightslategray; 
+    background-color: var(darkgray);
     clear: both;
     position: relative;
     transition: 2s;
@@ -138,7 +142,7 @@ the margin and padding issues of the css */
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    left: 2px;
+    left: -10px;
 }
 .next {
     cursor: pointer;
@@ -189,4 +193,22 @@ the margin and padding issues of the css */
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+
+@media only screen and (min-width: 768px) {
+    .carousel_img img {
+        width: 768px;
+        height: 492px;
+    }
+
+    .prev {
+        top: -264px;
+        left: -5px;
+    }
+
+    .next {
+        top: -264px;
+        right: 2px;
+    }
 }
