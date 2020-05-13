@@ -2,6 +2,7 @@
     width: 100%;
     overflow: hidden;
     text-align: center;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 /* body {
@@ -164,17 +165,15 @@ the margin and padding issues of the css */
     background-color: maroon;
 }
 
-.autoButton {
-    cursor: pointer;
-    position: absolute;
-    top: -600px;
-    width: auto;
-    margin-top: 20px;
-    padding: 16px;
-    color: black;
-    font-weight: bold;
-    font-size: 25px;
-    left: 30px;
+.car_text {
+    position: relative;
+    color: red;
+    z-index: 100;
+    width: 90%;
+    text-align: center;
+    padding: 3vw;
+    font-family: 'Acme', sans-serif;
+    font-size: clamp(1rem, 1.75vw, 5rem);
 }
 
 /* Fading animation */
@@ -255,17 +254,74 @@ the margin and padding issues of the css */
 
     #my_face {
         position: absolute;
-        margin: 0px;
+        margin: 0;
         padding: 0px;
         width: 100%;
         text-align: left;
-        top: 7vh;
-        left: 20vw;
+        top: 2.5vh;
     }
 
     #my_face img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        top: .5vh;
+        position: absolute;
+    }
+
+    .profession {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 8vh;
+    }
+
+    .links_wrapper {
+        margin-top: -10px;
+    }
+
+    .carousel_img img {
+        width: 1000px;
+        height: 500px;
+    }
+
+    .prev {
+        top: -264px;
+        left: -5px;
+    }
+
+    .next {
+        top: -264px;
+        right: 2px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .banner_img {
+        display: block;
+        width: 100%; 
+    }
+
+    #my_face {
+        position: absolute;
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+        text-align: left;
+        top: 10vh;
+    }
+
+    #my_face img {
+        width: 200px;
+        height: 200px;
     }
 
     .name {
@@ -291,8 +347,8 @@ the margin and padding issues of the css */
     }
 
     .carousel_img img {
-        width: 1000px;
-        height: 500px;
+        width: 1300px;
+        height: 750px;
     }
 
     .prev {
