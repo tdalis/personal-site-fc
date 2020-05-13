@@ -198,6 +198,25 @@ the margin and padding issues of the css */
     to {opacity: 1}
 }
 
+@media only screen and (max-width: 360px) {
+    #fcc {
+        position: relative;
+        margin-right: 30px;
+        margin-left: 5px;
+    }
+    
+    #cw {
+        position: relative;
+        margin-right: 50px;
+        margin-left: 15px;
+    }
+    
+    #gh {
+        position: relative;
+        margin-left: 10px;
+        
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .banner_img {
