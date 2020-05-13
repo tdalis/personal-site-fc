@@ -79,6 +79,10 @@ the margin and padding issues of the css */
     
 }
 
+#personalIntro {
+    text-align: left;
+}
+
 .img_carousel_container {
     width: 100%;
     text-align: center;
